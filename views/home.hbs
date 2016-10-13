@@ -1,0 +1,212 @@
+<div id="wrapper" class="">
+    <!-- Sidebar -->
+
+    <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper " class="hidePrint">
+          <div class="container-fluid">
+              <div class="row p-header">
+                  <div class="col-sm-1 p-header-bars">
+                  </div>
+                  <div class="col-sm-8 p-header-title">
+                      <h2>Upload Monthly Reports</h2>
+                  </div>
+                  <div class="col-sm-3 p-header-info">
+                    <br>
+                    <br>
+
+
+                  </div>
+              </div>
+              <div class="container-fluid">
+                <div class="row p-body-date">
+                <div class="form-group col-sm-3">
+                    <select name="month" id="js-month-select" class="form-control">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9" >September</option>
+                        <option value="10" selected="">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-3">
+                    <select class="form-control" name="year" id="js-report-year">
+                      <option value="2015">2015</option>
+                      <option value="2016" selected="">2016</option>
+                    </select>
+                </div>
+                              <div class="form-group  col-sm-3  col-sm-offset-3">
+                                <div class="input-group">
+                <input type="text" class="form-control" placeholder=" FIR Search">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+                </button>
+                </span>
+                </div>
+              </div>
+              </div>
+
+                  <form>
+                  <div class="row " style="background-color: ">
+                    <br>
+                  <!-- <div class="form-group col-sm-3">
+                          <label for="firno">FIR NO</label>
+                          <input type="text" class="form-control" name="firno" id="firno">
+                      </div> -->
+                      <div class="form-group col-sm-3">
+                                 <label for="sel1">FIR NO</label>
+                                  <input type="text" class="form-control" name="firno" id="sel1" placeholder="FIR NO" required>
+                                 <!-- <select class="form-control" id="sel1" >
+                                     <option>Select</option>
+                                     <option>FIR NO 167/9</option>
+                                     <option>FIR NO 120A	</option>
+                                     <option>FIR NO 110D</option>
+
+
+                                 </select> -->
+                             </div>
+
+                <!-- $("#sel1").change(function(){
+                    $("#sel1 option[value='default']").remove();
+                 }​); -->
+
+
+                        <div class="form-group col-sm-3">
+                                 <label for="sel1">Crime Heads</label>
+                                 <select class="form-control" id="sel2">
+                                     <option>Murder for Gain</option>
+                                     <option>Dacoity</option>
+                                     <option>Robery</option>
+                                     <option>H.Bs by Day	</option>
+                                     <option>H.Bs by Night	</option>
+                                     <option>Ordinary Thefts		</option>
+                                     <option>Murders	</option>
+
+
+                  <option>C.Homicides	</option>
+                  <option>Riotings	</option>
+                  <option>Kidnappings	</option>
+                  <option>Rape	</option>
+                  <option>Griev. Hurts	</option>
+                  <option>Simple Hurts	</option>
+                  <option>Cheatings	</option>
+                  <option>C.B.of Trust	</option>
+                  <option>C.F.Currency	</option>
+                  <option>S.Drugs	</option>
+                  <option>307  IPC	</option>
+                  <option>FATAL ACCIDENTS(304(A) IPC)	</option>
+                  <option>NON FATAL ACCIDENTS(337,338 IPC)	</option>
+                  <option>Other  IPC 	</option>
+
+                                 </select>
+                             </div>
+                             <div class="form-group col-sm-3">
+                                        <label for="sel1">Status</label>
+                                        <select class="form-control" id="sel3">
+                                            <!-- <option>REP</option>
+                                            <option>FAL</option>
+                                            <option>TRU</option>
+                                            <option>CHA</option>
+                                            <option>CON</option>
+                                            <option>ACQ		</option>
+                                            <option>COM	</option>
+
+
+                         <option>PT	</option>
+                         <option>UN	</option>
+                         <option>UI	</option> -->
+
+
+
+
+
+
+
+
+  {{#each result}}
+  <option>{{Name}}
+	</option>
+
+{{/each}}
+                                        </select>
+                                    </div>
+                      <!-- <div class="col-sm-7">
+                    <div class="form-group col-sm-1 ">
+                        <label for="check1">REP</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">FAL</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">TRU</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">CHA</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">CON</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">ACQ</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">COM</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">PT</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">UN</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-1">
+                        <label for="check1">UI</label>
+                        <input type="checkbox" class="form-control">
+                    </div>
+                  </div> -->
+                  </div>
+                  <div class="row" style="margin-top: 20px">
+                    <!-- <div class="form-group col-sm-2 col-sm-offset-6">
+                        <button class="btn btn--action btn-block" style="background-color:#00985C ">Add</button>
+                    </div> -->
+                    <div class="form-group col-sm-2 col-sm-offset-8">
+                        <button class="btn btn--action btn-block" id="submitButton" style="background-color:#00985C ">Submit</button>
+                    </div>
+                  </div>
+                  <br>
+                  </form>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <table id="results" class="table table-bordered table-responsive" style="width: 100%;max-width: 100%;margin-bottom: 20px;">
+       <thead>
+       <tr>
+           <th scope="col" >FIR NO</th>
+           <th scope="col" >CRIME HEAD</th>
+           <th scope="col" >STATUS</th>
+       </tr>
+       </thead>
+       <tbody>
+       </tbody>
+   </table>
+                  </div>
+                  </div>
+
+
+              </div>
+          </div>
+      </div>  </div>

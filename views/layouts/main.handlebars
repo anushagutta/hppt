@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>District Record Crime Beareau</title>
+  <style type="text/css" media="print">
+    @media print{
+      body {
+        -webkit-print-color-adjust: exact !important;
+        color:red;
+      }
+      .hidePrint{
+        display:none;
+      }
+
+      html{
+        color:#a94442 !important;
+      }
+    }
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="/font-awesome-4.5.0/css/font-awesome.min.css"> -->
+  <!-- <link rel="stylesheet" href="/css/fine-uploader.css"> -->
+  <!-- <link rel="stylesheet" href="/home/scriptbees/Music/nodeapp/public/css/styles.css">
+  <link rel="stylesheet" href="/home/scriptbees/Music/nodeapp/public/css/sidebar.css"> -->
+  <!-- <link rel="stylesheet" href="/css/pnotify.css"> -->
+  <!-- <link rel="stylesheet" media="print" href="/css/bootstrap.css"  /> -->
+  <!-- <link rel="stylesheet" media="print" href="/css/font-awesome-4.5.0/css/font-awesome.min.css"  /> -->
+  <!-- <link rel="stylesheet" media="print" href="/css/styles.css"  /> -->
+  <!-- <link rel="stylesheet" media="print" href="../css/sidebar.css"  /> -->
+  <link rel="stylesheet"  href="/sidebar.css"  />
+  <link rel="stylesheet"  href="/styles.css"  />
+
+
+
+
+  <!-- <script src="/js/jquery.js"></script> -->
+  <!-- <script src="/js/bootstrap.min.js"></script> -->
+  <!-- <scrip src="/js/jquery.file.downloade.js"></script> -->
+
+</head>
+<body style="background-color: #f5f5f5;">
+  <div id="sidebar-wrapper" class="hidePrint">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+          <span><i class="fa fa-spinner"></i> POLICE STATION</span>
+        </a>
+      </li>
+      <li class="sidebar-upload active">
+        <a href="#" data-toggle="collapse" data-target="#download" class="" aria-expanded="true">
+          <span>Reports to Upload <i class="fa fa-chevron-down"></i></span>
+        </a>
+        <ul id="download" class="collapse in" aria-expanded="true">
+          <li>
+            <a href="#"><i class="fa fa-chevron-right"></i> Weekly Reports</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-chevron-right"></i> Monthly Reports</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-chevron-right"></i> Quarterly Reports</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-chevron-right"></i> Yearly Reports</a>
+          </li>
+
+        </ul>
+      </li>
+      <li class="sidebar-download">
+        <a href="#" data-toggle="collapse" data-target="#upload" class="" aria-expanded="true">
+          <span>Download Reports <i class="fa fa-chevron-down"></i></span>
+        </a>
+        <ul id="upload" class="collapse" aria-expanded="true">
+          <li>
+            <a href="/data/dcrb/download/weekly"><i class="fa fa-chevron-right"></i> Weekly Reports</a>
+          </li>
+          <li>
+            <a href="/data/dcrb/download"><i class="fa fa-chevron-right"></i> Monthly Reports</a>
+          </li>
+          <li>
+            <a href="/data/dcrb/download/quarterly"><i class="fa fa-chevron-right"></i> Quarterly Reports</a>
+          </li>
+          <li>
+            <a href="/data/dcrb/download/yearly"><i class="fa fa-chevron-right"></i> Yearly Reports</a>
+          </li>
+        </ul>
+      </li>
+      <li class="sidebar-bot">
+        <a href="#">
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+    {{{body}}}
+
+
+</body>
+<script>
+// $('#myForm').validator();
+$('#submitButton').click(function(ev){
+// $('#myForm').validator();
+ev.preventDefault();
+ var fir = document.getElementById("sel1").value;
+  //$('#myForm').validator();
+  var crime = document.getElementById("sel2").value;
+  var status = document.getElementById("sel3").value;
+  var new_row = "<tr><td>" + fir + "</td><td>" + crime + "</td><td>" + status + "</td></tr>";
+ $("table tbody").append(new_row);
+//   $.ajax({
+//   url: "/",
+//   method:'post'
+// })
+//   .done(function( html ) {
+//     $("table tbody").append(new_row);
+//   });
+$('input[type="text"], textarea').val('');
+$('#sel2').get(0).selectedIndex = 0;
+$('#sel3').get(0).selectedIndex = 0;
+
+
+});
+
+</script>
+</html>
