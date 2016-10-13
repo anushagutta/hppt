@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
+//var cookieParser = require('cookie-parser');
 var app = express();
 var path = require('path');
 //var mongoskin = require('mongoskin');
@@ -18,6 +19,10 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'));
 app.use(express.static('files'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+//app.use(cookieParser());
 app.use('/static', express.static('public'));
 app.get('/',routes);
 app.post('/login', function (req, res) {
@@ -25,6 +30,17 @@ app.post('/login', function (req, res) {
   console.log('hello');
 console.log(req.query);
     res.render('home');
+});
+
+app.post('/save/crime',function(req,res){
+  var data = req.body;
+  db.collection('fir').insert(data,function(err,result){
+    if(err){
+      console.log(err);
+    }else{
+      res.redirect('/');
+    }
+  })
 });
 
 app.listen(3000);

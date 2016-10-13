@@ -53,7 +53,7 @@
               </div>
               </div>
 
-                  <form>
+                  <form method="POST" action="/save/crime" enctype="application/x-www-form-urlencoded">
                   <div class="row " style="background-color: ">
                     <br>
                   <!-- <div class="form-group col-sm-3">
@@ -61,7 +61,7 @@
                           <input type="text" class="form-control" name="firno" id="firno">
                       </div> -->
                       <div class="form-group col-sm-3">
-                                 <label for="sel1">FIR NO</label>
+                                 <label for="firno">FIR NO</label>
                                   <input type="text" class="form-control" name="firno" id="sel1" placeholder="FIR NO" required>
                                  <!-- <select class="form-control" id="sel1" >
                                      <option>Select</option>
@@ -80,7 +80,7 @@
 
                         <div class="form-group col-sm-3">
                                  <label for="sel1">Crime Heads</label>
-                                 <select class="form-control" id="sel2">
+                                 <select class="form-control" name="sel2" id="sel2">
                                      <option>Murder for Gain</option>
                                      <option>Dacoity</option>
                                      <option>Robery</option>
@@ -109,7 +109,7 @@
                              </div>
                              <div class="form-group col-sm-3">
                                         <label for="sel1">Status</label>
-                                        <select class="form-control" id="sel3">
+                                        <select class="form-control" name="sel3" id="sel3">
                                             <!-- <option>REP</option>
                                             <option>FAL</option>
                                             <option>TRU</option>
@@ -130,7 +130,7 @@
 
 
 
-  {{#each result}}
+  {{#each status}}
   <option>{{Name}}
 	</option>
 
@@ -185,11 +185,11 @@
                         <button class="btn btn--action btn-block" style="background-color:#00985C ">Add</button>
                     </div> -->
                     <div class="form-group col-sm-2 col-sm-offset-8">
-                        <button class="btn btn--action btn-block" id="submitButton" style="background-color:#00985C ">Submit</button>
+                        <button class="btn btn--action btn-block" id="submitButton" type="submit"  style="background-color:#00985C ">Submit</button>
                     </div>
                   </div>
+                </form>
                   <br>
-                  </form>
                   <div class="container-fluid">
                     <div class="row">
                       <table id="results" class="table table-bordered table-responsive" style="width: 100%;max-width: 100%;margin-bottom: 20px;">
@@ -201,7 +201,16 @@
        </tr>
        </thead>
        <tbody>
+         {{#each result}}
+         <tr>
+          <td>{{firno}}</td>
+          <td>{{sel2}}</td>
+          <td>{{sel3}}</td>
+         </tr>
+         {{/each}}
        </tbody>
+
+
    </table>
                   </div>
                   </div>

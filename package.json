@@ -11,6 +11,7 @@
   "author": "Eric Ferraiuolo <eferraiuolo@gmail.com>",
   "license": "BSD",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.7.2"
   }
 }
