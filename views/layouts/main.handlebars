@@ -45,7 +45,7 @@
 
 </head>
 <body style="background-color: #f5f5f5;">
-  <div id="sidebar-wrapper" class="hidePrint">
+  <!-- <div id="sidebar-wrapper" class="hidePrint">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a href="#">
@@ -97,7 +97,7 @@
         </a>
       </li>
     </ul>
-  </div>
+  </div> -->
     {{{body}}}
 
 
@@ -126,6 +126,18 @@ $('#sel3').get(0).selectedIndex = 0;
 
 
 }); */
+$(document).ready(function() {
+$('#namevalue').keydown(function(el,ev) {
+  if((el.keyCode>=65 && el.keyCode<=90) || (el.keyCode==8 ) ||(el.keyCode==9)||(el.keyCode==32)){
+     document.getElementById('notification').innerHTML="";
+    return true
+  }
+  else{
+    document.getElementById('notification').innerHTML="support only character"
+    return false;
+  }
+  });
+});
 
 </script>
 </html>

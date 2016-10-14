@@ -3,6 +3,9 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  // var obj = {};
+  // //   obj.files = result.files;
+  // obj._csrf = req.csrfToken();
   db.collection('fir').find({}).toArray(function(err,result){
     if(err){
       console.log(err);

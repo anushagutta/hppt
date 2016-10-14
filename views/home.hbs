@@ -1,4 +1,4 @@
-<div id="wrapper" class="">
+<div  class="">
     <!-- Sidebar -->
 
     <!-- /#sidebar-wrapper -->
@@ -8,7 +8,7 @@
                   <div class="col-sm-1 p-header-bars">
                   </div>
                   <div class="col-sm-8 p-header-title">
-                      <h2>Upload Monthly Reports</h2>
+                      <h2><center>Basic Application</center></h2>
                   </div>
                   <div class="col-sm-3 p-header-info">
                     <br>
@@ -41,7 +41,7 @@
                       <option value="2016" selected="">2016</option>
                     </select>
                 </div>
-                              <div class="form-group  col-sm-3  col-sm-offset-3">
+                              <!-- <div class="form-group  col-sm-3  col-sm-offset-3">
                                 <div class="input-group">
                 <input type="text" class="form-control" placeholder=" FIR Search">
                 <span class="input-group-btn">
@@ -50,7 +50,7 @@
                 </button>
                 </span>
                 </div>
-              </div>
+              </div> -->
               </div>
 
                   <form method="POST" action="/save/crime" enctype="application/x-www-form-urlencoded">
@@ -137,6 +137,11 @@
 {{/each}}
                                         </select>
                                     </div>
+                <div class="form-group col-sm-3">
+                 <label for="firno">PoliceStation Name</label>
+                  <input type="text" class="form-control" name="namevalue" id="namevalue" placeholder="Name of the police station" required>
+     <div id="notification" style="color:red"></div>
+                  </div>
                       <!-- <div class="col-sm-7">
                     <div class="form-group col-sm-1 ">
                         <label for="check1">REP</label>
@@ -206,6 +211,7 @@
           <td>{{firno}}</td>
           <td>{{sel2}}</td>
           <td>{{sel3}}</td>
+          <td>{{namevalue}}
          </tr>
          {{/each}}
        </tbody>
